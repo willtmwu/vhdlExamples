@@ -26,7 +26,7 @@ BEGIN
       count <= 0;                                           
       pwm_out <= '1';                                       
     ELSIF(clk'EVENT AND clk = '1') THEN                                
-        IF(en = '1') THEN                                              
+      IF(en = '1') THEN                                              
 				duty_cycle <= (conv_integer(duty) * period) / ((2**8) - 1);
 		  ELSE
 			  IF(count = period - 1) THEN                  
